@@ -1,0 +1,732 @@
+/* Contenedor  */
+    .containerPage{
+        display: grid;
+        grid-template-columns: repeat(1fr auto )
+    }
+/* Fin Contenedor  */
+
+
+/* Estilos básicos del documento */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: auto 1fr auto; /* Header, Main y Footer */
+        min-height: 100dvh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+    }
+
+    main {
+        flex-grow: 1; /* Permite que el main ocupe el espacio restante */
+        padding: 1rem;
+        background-color: #333;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        height: 100px; /* Altura específica para el footer */
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center;     /* Centrar verticalmente */
+        border: 1px solid #ccc;
+    }
+
+    .footer-content {
+        width: 80%; /* Ocupa el 80% del ancho */
+        text-align: right; /* Alinea el contenido dentro del contenedor hacia la derecha */
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        }
+    }
+/* Fin Estilos básicos del documento */
+
+/* Estilo inicial del texto */
+    .typing-effect {
+        display: inline-block;
+        font-size: 4rem; /* Ajusta el tamaño del texto */
+        font-weight: 500; /* Ajusta el grosor del texto */
+        white-space: nowrap; /* Evita el ajuste de línea */
+        overflow: hidden; /* Oculta el contenido que excede el ancho */
+        border-right: .15em solid orange; /* Simula el cursor de escritura */
+        position: relative; /* Necesario para el efecto del cursor */
+        animation: typing 4s steps(50, end), blink-caret .75s step-end infinite;
+        margin: 0 auto; /* Asegura que el texto se mantenga centrado */
+    }
+
+    .typing-effect.finished {
+        border-right: none; /* Elimina el cursor parpadeante al finalizar */
+        animation: none; /* Detiene la animación al finalizar */
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: orange; }
+    }
+
+/* Fin - movimiento del titulo como escrito */
+
+/* Estilos de la cuadrícula */
+
+    /* body */
+    .grid-container {
+        display: grid;
+        /*grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+       /* grid-template-columns: repeat(2, 1fr); /* 3 columnas */
+        gap: 1rem; /* Espacio entre elementos */
+        padding: 1rem;
+    }
+
+
+/* Estilos de contenedores */
+    .grid-container-titulo {
+        display: flex;
+        /*justify-content: center;*/
+        align-items: center;
+        padding: 1rem;
+        justify-content: flex-end;
+    }
+
+    .grid-container-menu {
+        display: flex; /* Cambiar a flexbox */
+        /*display: grid;*/
+        /*grid-template-columns: 1fr 1fr;*/
+    /* justify-content: end; /* Alinea el contenido a la derecha */
+    justify-content: flex-end; /* Alinear a la derecha */
+    gap: 1rem; /* Espacio entre los elementos */
+    align-items: center;
+    }
+
+    .menu-section {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    /* Estilos para el dropdown */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropbtn {
+        background-color: transparent;
+        /*padding: 0.5rem 1rem;*/
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropbtn:hover {
+        transform: scale(1.1);
+    }
+
+    #language-switcher button:hover svg {
+        stroke: #f19203; /* Cambia el color del icono al hacer hover */
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ff0505; 
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       /* border-radius: 4px;*/
+    }
+
+    .dropdown-content a {
+        color: #f19203;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #333;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+/* Estilos para el color switcher */
+
+    #color-switcher button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    #color-switcher button svg {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.5;
+        transition: stroke 0.3s ease;
+    }
+
+    /* Efecto hover para los botones */
+    #color-switcher button:hover {
+        transform: scale(1.1); /* Agranda el botón al hacer hover */
+    }
+
+    #color-switcher button:hover svg {
+        stroke: #f19203; /* Cambia el color del icono al hacer hover */
+    }
+
+/*------*/
+
+/*Fin Menu*/
+
+.titulo {
+    display: grid;
+    /*grid-template-columns: 1fr auto; /* 3 columnas iguales */
+    /*gap: 1rem; /* Espacio entre elementos */
+    padding: 1rem;
+}
+
+.titulo h2 {
+    margin: 0; /* Elimina márgenes para una alineación más precisa */
+    font-size: 1.5em; /* Tamaño del texto para el subtítulo */
+    color: #f19203; /* Opcional: Cambia el color del subtítulo si lo deseas */
+}
+
+.titulo-item {
+    /*background-color: #f4f4f4;*/
+    padding: 1rem;
+    /*border: 1px solid #ddd;*/
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    /*color: #333;*/
+}
+
+
+/* Diseño responsivo */
+    /* Pantalla Grande */
+    @media (min-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr); /* 3 columnas en pantallas grandes */
+            border: 1px solid #ccc;
+ /* border: 1px solid #ccc;*/
+
+        }
+
+        .titulo-item {
+            /* Asegura que el menú sea horizontal en pantallas grandes */
+            display: flex;
+           /* flex-direction: flex-end; /* Dirección horizontal en pantallas grandes */
+            justify-content: flex-end;
+        }
+    }
+
+    /* Pantalla pequeña */
+    @media (max-width: 767px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+            justify-content: center; /* Centra el contenido */
+            border: 1px solid #ccc;
+        }
+        .typing-effect {
+            font-size: 1.5rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        }
+
+        .titulo-item {
+            display: flex;
+            justify-content: center; /* Centra el contenido en la dirección horizontal */
+            flex-direction: column; /* Cambia a vertical si deseas apilar elementos */
+            align-items: center; /* Asegura que los elementos dentro estén centrados */
+        }
+
+
+                /* Menú principal (vertical) */
+        nav ul:not(.iconos) {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los elementos del menú verticalmente */
+        }
+
+        nav ul:not(.iconos) li {
+            margin: 1.5rem 0; /* Espacio vertical entre los elementos del menú */
+        }
+
+        nav ul:not(.iconos) li a {
+            display: block;
+            /*border-bottom: 1px solid #ddd;*/
+            text-align: center;
+            padding: 2px;
+        }
+
+
+    }
+
+/*Fin Diseño responsivo */
+
+/*tema oscuro y claro*/
+.dark-mode {
+    --header-bg: #222;
+    --header-color: #ddd;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.light-mode {
+    --header-bg: #f5f5f5;
+    --header-color: #333;
+    background-color: #fff;
+    color: #f1920375;
+}
+/*Fin -tema oscuro y claro*/
+
+
+/* Menu iconos*/
+
+.menu.flotante {
+    position: fixed; /* Fija el menú en la pantalla */
+    top: 50%; /* Centra verticalmente */
+    right: 20px; /* Coloca el menú a la derecha */
+    transform: translateY(-50%); /* Ajusta la posición para centrar */
+}
+
+.iconos {
+    display: grid; /* Usa grid para el diseño */
+    grid-template-columns: repeat(1, 1fr); /* 1 columna */
+    gap: 10px; /* Espacio entre los íconos */
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Quita el padding por defecto */
+}
+
+.iconos li {
+    display: flex; /* Flex para centrar el ícono */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.iconos a {
+    display: flex; /* Flex para el alineamiento del ícono */
+    justify-content: center; /* Centra horizontalmente el ícono dentro del enlace */
+    align-items: center; /* Centra verticalmente el ícono dentro del enlace */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 5px; /* Espaciado interno */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Efecto de transición para el zoom */
+    background-color: rgba(255, 255, 255, 0.514); /* Fondo blanco semitransparente */
+    
+}
+
+.iconos a svg {
+    width: 28px; /* Tamaño de los íconos */
+    height: 28px; /* Tamaño de los íconos */
+    transition: stroke 0.3s ease; /* Efecto de transición para el color del borde */
+}
+
+.iconos a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en hover */
+}
+
+.iconos a:hover svg {
+    stroke: #f19203; /* Cambia el color del borde en hover */
+}
+
+
+/* fin menu iconos*/
+
+/* Segunda animacion del titulo 2*/
+.typing-effecto-two {
+    display: inline-block;
+    position: relative;
+    font-size: 24px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold; /* Ajusta el peso según sea necesario */
+    font-family: Arial, sans-serif; /* Ajusta la fuente según sea necesario */
+    overflow: hidden; /* Esconde el texto que se mueve fuera del contenedor */
+}
+
+.typing-effecto-two span {
+    display: inline-block;
+    transform: rotate(90deg); /* Hace que las letras estén acostadas */
+    opacity: 0; /* Inicialmente ocultas las letras */
+    transform-origin: bottom center; /* Establece el punto de rotación en la parte inferior central */
+}
+
+.typing-effecto-two span.show {
+    opacity: 1; /* Muestra la letra */
+    transform: rotate(0deg); /* Restaura la orientación vertical */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transición para levantar la letra */
+}
+
+.typing-effecto-two.finished span {
+    transform: rotate(0deg); /* Asegura que las letras estén en posición vertical al finalizar la animación */
+}
+
+.typing-effecto-two:hover span {
+    animation: none; /* Reanuda la animación al pasar el mouse */
+}
+
+@keyframes liftUp {
+    0% {
+        transform: rotate(90deg); /* Comienza con las letras acostadas */
+        opacity: 0; /* Inicialmente ocultas las letras */
+    }
+    100% {
+        transform: rotate(0deg); /* Levanta las letras */
+        opacity: 1; /* Muestra las letras */
+    }
+}
+
+/* Fin - Segunda animacion del titulo 2*
+
+/* Animacion de hover en menu Body*/
+
+/* animacion menu body */
+
+.titulo-item nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.titulo-item nav ul li {
+    display: inline-block;
+    margin: 0 15px; /* Espaciado entre enlaces */
+    position: relative;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255); /* Color por defecto */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.nav-link:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Espaciado debajo del enlace */
+    width: 0;
+    height: 2px; /* Grosor de la línea */
+    background-color: #f19203; /* Color de la línea */
+    transition: width 0.3s ease, left 0.3s ease; /* Transición suave */
+}
+
+.nav-link:hover {
+    color: #f19203; /* Color al pasar el mouse */
+}
+
+.nav-link:hover:before {
+    width: 100%; /* Expande la línea al 100% */
+    left: 0; /* Alinea la línea con el texto */
+}
+
+/* fin animacion menu body */
+
+/* Fin- Animacion de hover en menu Body*/
+
+/*body contact*/
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#contact h2 {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+}
+
+#contact svg {
+    margin-right: 8px;
+}
+
+/*fin body contact*/
+
+/* body grid*/
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: 1fr; /* 3 columnas iguales en pantallas grandes */
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    .col1, .col2, .col3 {
+        padding: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    .col1 {
+        /*background-color: rgb(20, 232, 214);*/
+        background-color: #333;
+        /* border: 1px solid #ccc;*/
+    }
+
+    .col2 {
+        background-color: #333;
+         border: 1px solid #ccc;
+    }
+
+    .col3 {
+        background-color: #333;
+        /* border: 1px solid #ccc;*/
+    }
+
+    /* Subgrid internos */
+    .subgrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 2 columnas */
+        /*grid-template-rows: repeat(1, 1fr);   /* 2 filas */
+        gap: 0.5rem;
+        /*border: 1px solid #ccc;*/
+    } 
+
+    .subgrid1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 2 columnas */
+        /*grid-template-rows: repeat(1, 1fr);   /* 2 filas */
+        gap: 0.5rem;
+      /*  border: 1px solid #ccc;*/
+    } 
+
+    .subgrid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+       /* grid-template-rows: repeat(2, 1fr);   /* 2 filas */
+        gap: 0.5rem;
+    }
+
+    .subgrid3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 2 columnas */
+        grid-template-rows: repeat(1, 1fr);   /* 2 filas */
+        gap: 0.5rem;
+    }
+
+    .subgrid4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 2 columnas */
+        /*grid-template-rows: repeat(1, 1fr);   /* 2 filas */
+        gap: 0.5rem;
+    }
+
+    .subcol {
+        /*background-color: #f4f4f4;*/
+        margin-bottom: 0.5rem; 
+        padding: 1rem;
+       /* border: 1px solid #ccc;*/
+        background-color: #333;
+        color: #ffffff;
+    }
+    /* Subgrid internos */
+
+    .subcol h2 {
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center;     /* Centrar verticalmente */
+        text-align: center;      /* Asegura que el texto esté centrado */
+        height: 100%;  
+        /*border: 1px solid #ccc;*/
+        color: #f19203;
+    }
+
+    .subcol h3 {
+        display: flex;
+        /*justify-content: center; /* Centrar horizontalmente */
+        align-items: center;     /* Centrar verticalmente */
+        text-align: center;      /* Asegura que el texto esté centrado */
+        /*height: 100%;           */
+        font-size: 1.5em;
+        /*margin-bottom: 10px;*/
+        color: #ffffff;
+        /* border: 1px solid #ccc;*/
+    }
+
+
+    /* Estilos responsivos para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        }
+
+        .subgrid2 {
+            grid-template-columns: 1fr; /* Subcolumna apilada en pantallas pequeñas */
+        }
+    }
+
+    /* Experiencia*/
+      
+    .subcol h4 {
+        font-size: 1.1em;
+        /*margin-bottom: 5px;*/
+        color: #c0b8b8;
+    }
+    
+    .subcol p {
+        margin: 5px 0;
+        font-size: 1em;
+        color: #c0b8b8;
+    }
+    
+    .subcol ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    
+    .subcol ul li {
+        margin-bottom: 5px;
+        color: #c0b8b8;
+    }
+    
+    .tecno {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Tres columnas */
+        /*gap: 1rem; /* Espacio entre los elementos */
+        /*list-style-type: none; /* Elimina los puntos de la lista */
+        /*padding: 0; /* Elimina el padding por defecto */
+    }
+
+    .tecno li {
+        flex: 1 1 30%; /* Haz que cada elemento ocupe aproximadamente el 30% del ancho */
+    }
+
+    /* Fin Experiencia*/
+
+    /*efecto foto*/
+    /* Estilo del contenedor de cartas */
+#card-stack {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+/* Estilo común de las cartas */
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.6s ease, background 0.6s ease;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* Estilo de las cartas traseras (Póker) */
+.poker-card {
+    background-color: #34495e;
+    border: 2px solid #2c3e50;
+}
+
+#card1 {
+    transform: rotate(-25deg) translateY(30px);
+}
+#card2 {
+    transform: rotate(-10deg) translateY(15px);
+}
+
+/* Estilo especial para la carta de la foto */
+.photo-card {
+    background-color: #f19203;
+    overflow: hidden;
+    transform: rotate(0deg);
+    transform: rotate(5deg) translateY(15px);
+}
+
+/* Estilo de la imagen dentro de la carta */
+.photo {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* Efecto de agua al congelarse */
+.photo-card:hover .photo {
+    transform: scale(1.1) saturate(0.2) brightness(0.5);
+    filter: blur(5px);
+    transition: transform 3s ease, filter 3s ease;
+}
+
+/* Efecto de congelación más realista (agua) */
+.photo-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    background-image: url('/storage/fotow.jpeg');
+    background-size: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 3s ease;
+}
+
+.photo-card:hover::before {
+    opacity: 1;
+}
+
+/* Volver a ver la foto clara después de 3 segundos */
+.photo-card.clear:hover .photo {
+    filter: none;
+    transform: scale(1);
+}
+    /*fin efecto foto*/
+
+/*Fin body grid*/
