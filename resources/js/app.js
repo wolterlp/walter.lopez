@@ -73,67 +73,61 @@ document.addEventListener('DOMContentLoaded', () => {
 /* fin menu icono */
 
 /* Segunda animacion del titulo 2*/
-document.addEventListener('DOMContentLoaded', () => {
-    const typingEffectTwo = document.querySelector('.typing-effecto-two');
-    const textTwo = typingEffectTwo.textContent;
-    typingEffectTwo.textContent = ''; // Limpia el contenido del texto
-    
-    const letters = textTwo.split(''); // Divide el texto en letras
-    letters.forEach(letter => {
-        const span = document.createElement('span');
-        span.textContent = letter;
-        typingEffectTwo.appendChild(span);
-    });
-    
-    let indexTwo = letters.length - 1; // Comienza desde la última letra
-    const delay = 100; // Retraso entre la aparición de las letras
-    
-    function animateLetters() {
-        if (indexTwo >= 0) {
-            typingEffectTwo.children[indexTwo].classList.add('show');
-            indexTwo--;
-            setTimeout(animateLetters, delay);
-        } else {
-            typingEffectTwo.classList.add('finished'); // Añade la clase 'finished' cuando la animación ha terminado
-        }
-    }
-
-    // Inicia la animación al cargar la página
-    animateLetters();
-
-    // Reanuda la animación al pasar el mouse
-    typingEffectTwo.addEventListener('mouseenter', () => {
-        typingEffectTwo.classList.remove('finished');
-        Array.from(typingEffectTwo.children).forEach(span => {
-            span.classList.remove('show');
+    document.addEventListener('DOMContentLoaded', () => {
+        const typingEffectTwo = document.querySelector('.typing-effecto-two');
+        const textTwo = typingEffectTwo.textContent;
+        typingEffectTwo.textContent = ''; // Limpia el contenido del texto
+        
+        const letters = textTwo.split(''); // Divide el texto en letras
+        letters.forEach(letter => {
+            const span = document.createElement('span');
+            span.textContent = letter;
+            typingEffectTwo.appendChild(span);
         });
-        indexTwo = letters.length - 1;
+        
+        let indexTwo = letters.length - 1; // Comienza desde la última letra
+        const delay = 100; // Retraso entre la aparición de las letras
+        
+        function animateLetters() {
+            if (indexTwo >= 0) {
+                typingEffectTwo.children[indexTwo].classList.add('show');
+                indexTwo--;
+                setTimeout(animateLetters, delay);
+            } else {
+                typingEffectTwo.classList.add('finished'); // Añade la clase 'finished' cuando la animación ha terminado
+            }
+        }
+
+        // Inicia la animación al cargar la página
         animateLetters();
+
+        // Reanuda la animación al pasar el mouse
+        typingEffectTwo.addEventListener('mouseenter', () => {
+            typingEffectTwo.classList.remove('finished');
+            Array.from(typingEffectTwo.children).forEach(span => {
+                span.classList.remove('show');
+            });
+            indexTwo = letters.length - 1;
+            animateLetters();
+        });
     });
-});
 
 /* Fin - Segunda animacion del titulo 2*/
 
-/* animacion menu body */
-
-
-
-/* fin animacion menu body */
-
 /* fin animacion foto */
 
-// Simulación de "congelación" con agua realista
-document.getElementById("card-photo").addEventListener("mouseenter", function() {
-    let photoCard = document.getElementById("card-photo");
-    setTimeout(function() {
-        // Inicia el efecto de congelamiento después de 3 segundos
-        photoCard.classList.add('clear');
-    }, 3000);
-});
+    // Simulación de "congelación" con agua realista
+    document.getElementById("card-photo").addEventListener("mouseenter", function() {
+        let photoCard = document.getElementById("card-photo");
+        setTimeout(function() {
+            // Inicia el efecto de congelamiento después de 3 segundos
+            photoCard.classList.add('clear');
+        }, 3000);
+    });
 
-document.getElementById("card-photo").addEventListener("mouseleave", function() {
-    let photoCard = document.getElementById("card-photo");
-    photoCard.classList.remove('clear');
-});
+    document.getElementById("card-photo").addEventListener("mouseleave", function() {
+        let photoCard = document.getElementById("card-photo");
+        photoCard.classList.remove('clear');
+    });
 
 /* Fin animacion foto */

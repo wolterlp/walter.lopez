@@ -28,8 +28,8 @@
                                 </svg>
                             </button>
                             <div class="dropdown-content">
-                                <a href="{{ url('/?lang=en') }}">English</a>
-                                <a href="{{ url('/?lang=es') }}">Español</a>
+                                <a href="{{ url('/?lang=en') }}">{{ __('English') }}</a>
+                                <a href="{{ url('/?lang=es') }}">{{ __('Spanish') }}</a>
                             </div>
                         </div>
                     </div>
@@ -57,9 +57,9 @@
                 <nav>
                     <ul>
                         <li><a href="#about" class="nav-link" >{{ __('About') }}</a></li>
-                        <li><a href="#projects" class="nav-link" >Projects</a></li>
-                        <li><a href="#contact" class="nav-link" >Contact</a></li>
-                        <li><a href="#cv" class="nav-link" >Curriculum Vitae</a></li>
+                        <li><a href="#projects" class="nav-link" >{{ __('Projects') }}</a></li>
+                        <li><a href="#contact" class="nav-link" >{{ __('Contact') }}</a></li>
+                        <li><a href="#cv" class="nav-link" >{{ __('Curriculum Vitae') }}</a></li>
                     </ul>
                 </nav>
             </div>
@@ -129,9 +129,17 @@
                         </div>
                         <div class="subcol">
                             <section id="about">
-                                <h2>About Me</h2>
-                                <p style="text-align: left;">
-                                    Desarrollador web con sólida experiencia tanto en el frontend como en el backend. Experto en la creación de aplicaciones web rápidas, seguras y escalables, utilizando tecnologías modernas como <strong>PHP</strong>, <strong>Laravel</strong> y herramientas de diseño eficientes como <strong>Tailwind CSS</strong>. Competente en la gestión y optimización de bases de datos, tales como <strong>MySQL</strong>, <strong>PostgreSQL</strong> y <strong>Oracle</strong>, garantizando alto rendimiento y disponibilidad. También cuento con habilidades avanzadas en análisis de datos y desarrollo de inteligencia artificial mediante <strong>Python</strong>, <strong>Anaconda</strong> y <strong>Keras</strong> (redes neuronales). Mi enfoque está en proporcionar soluciones tecnológicas que optimicen la experiencia del usuario y mejoren la eficiencia operativa de empresas a gran escala.
+                                <h2>{{ __('About Me') }}</h2>
+                                <p style="text-align: left;"> {{ __(' Web developer with solid experience in both frontend and backend. Expert in building fast, secure, and scalable web applications using modern technologies such as ') }}
+                                    <strong>PHP</strong>, 
+                                    <strong>Laravel</strong>{{ __(' and efficient design tools such as') }} 
+                                    <strong>Tailwind CSS</strong>. {{ __('Proficient in managing and optimizing databases such as') }} 
+                                    <strong>MySQL</strong>, 
+                                    <strong>PostgreSQL</strong>, {{ __('and') }} 
+                                    <strong>Oracle</strong>, {{ __('ensuring high performance and availability. I also have advanced skills in data analysis and artificial intelligence development using') }} 
+                                    <strong>Python</strong>, 
+                                    <strong>Anaconda</strong>, {{ __('and') }} 
+                                    <strong>Keras</strong> ({{ __('neural networks') }}). {{ __('My focus is on providing technology solutions that optimize user experience and improve operational efficiency for large-scale businesses.') }}
                                 </p>
                             </section>
                         </div>
@@ -141,12 +149,12 @@
                     <section id="Tecnologias">
                         <div class="subgrid1">
                             <div class="subcol">
-                                <h2>Tecnologías Clave</h2>
+                                <h2>{{ __('Key Technologies') }}</h2>
                             </div>
                         </div>
                         <div class="subgrid4">
                             <div class="subcol">
-                                <h3>Frontend</h3>
+                                <h3>{{ __('Frontend') }}</h3>
                                 <ul>
                                     <li>HTML5</li>
                                     <li>CSS3</li>
@@ -157,7 +165,7 @@
                                 </ul>
                             </div>
                             <div class="subcol">
-                                <h3>Backend</h3>
+                                <h3>{{ __('Backend') }}</h3>
                                 <ul>
                                     <li>PHP (Laravel, Symfony)</li>
                                     <li>Web Services</li>
@@ -167,7 +175,7 @@
                                 </ul>
                             </div>
                             <div class="subcol">
-                                <h3>Análisis Datos I.A</h3>
+                                <h3>{{ __('AI Data Analysis') }}</h3>
                                 <ul>
                                     <li>Python</li>
                                     <li>Anaconda</li>
@@ -177,7 +185,7 @@
                                 </ul>
                             </div>
                             <div class="subcol">
-                                <h3>Otros</h3>
+                                <h3>{{ __('Other') }}</h3>
                                 <ul>
                                     <li>Git</li>
                                     <li>Pentaho</li>
@@ -194,20 +202,20 @@
                     <section id="Experiencia">
                         <div class="subgrid1">
                             <div class="subcol">
-                                <h2>Experiencia Profesional</h2>
+                                <h2>{{ __('Professional Experience') }}</h2>
                             </div>
                         </div>
 
                         <div class="subgrid2">
                             <div class="subcol">
-                                <h3>Experiencia como Freelancer</h3>
-                                <h4>Desarrollo de Aplicaciones Web Empresariales</h4>
-                                <p><strong>Agosto 2019 - Presente</strong></p>
-                                <p><strong>Actividades:</strong></p>
+                                <h3>{{ __('Freelancer Experience') }}</h3>
+                                <h4>{{ __('Enterprise Web Application Development') }}</h4>
+                                <p><strong>{{ __('August 2019 - Present') }}</strong></p>
+                                <p><strong>{{ __('Activities') }}:</strong></p>
                                 <ul>
-                                    <li>Diseño y desarrollo de aplicaciones empresariales personalizadas utilizando Laravel, integrando módulos de ventas, inventarios y sistemas de reportes automatizados, Implementación de APIs RESTful y arquitecturas escalables.</li>
+                                    <li>{{ __('Design and development of custom enterprise applications using Laravel, integrating sales modules, inventories and automated reporting systems, Implementation of RESTful APIs and scalable architectures.') }}</li>
                                 </ul>
-                                <p><strong>Tecnologías:</strong></p>
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
                                 <ul class="tecno">
                                     <li>Laravel</li>
                                     <li>MySQL</li>
@@ -218,18 +226,17 @@
 
                             <div class="subcol">
                                 <h3>Watari</h3>
-                                <h4>Administrador y Desarrollador Web</h4>
-                                <p><strong>Agosto 2019 - Febrero 2024</strong></p>
-                                <p><strong>Actividades:</strong></p>
+                                <h4>{{ __('Web Administrator and Developer') }}</h4>
+                                <p><strong>{{ __('August 2019 - February 2024') }}</strong></p>
+                                <p><strong>{{ __('Activities') }}:</strong></p>
                                 <ul>
-                                    <li>Desarrollo de soluciones de software para la programación de horarios y evaluación del desempeño, Optimización de sistemas financieros y operativos mediante software de contabilidad y control de inventarios.</li>
+                                    <li>{{ __('Development of software solutions for programming and performance evaluation, Optimization of financial and operational systems using accounting and inventory control software.') }}</li>
                                 </ul>
-                                <p><strong>Tecnologías:</strong></p>
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
                                 <ul class="tecno">
                                     <li>PHP</li>
                                     <li>MySQL</li>
                                     <li>Laravel</li>
-                                    <li>Control de Inventarios</li>
                                 </ul>
                             </div>
                         </div>
@@ -237,13 +244,13 @@
                         <div class="subgrid2">
                             <div class="subcol">
                                 <h3>Iteria Forward Thinking</h3>
-                                <h4>Consultor y Programador Web</h4>
-                                <p><strong>Agosto 2017 - Julio 2019</strong></p>
-                                <p><strong>Actividades:</strong></p>
+                                <h4>{{ __('Web Consultant and Programmer') }}</h4>
+                                <p><strong>{{ __('August 2017 - July 2019') }}</strong></p>
+                                <p><strong>{{ __('Activities') }}:</strong></p>
                                 <ul>
-                                    <li>Desarrollo de aplicaciones web utilizando Laravel, PHP (MVC), JavaScript y jQuery, Programación en Oracle y uso de Pentaho para análisis de datos.</li>
+                                    <li>{{ __('Development of web applications using Laravel, PHP (MVC), JavaScript and jQuery, Programming in Oracle and use of Pentaho for data analysis.') }}</li>
                                 </ul>
-                                <p><strong>Tecnologías:</strong></p>
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
                                 <ul class="tecno">
                                     <li>Laravel</li>
                                     <li>PHP (MVC)</li>
@@ -254,16 +261,16 @@
 
                             <div class="subcol">
                                 <h3>Inverceramicas</h3>
-                                <h4>Administrador de Sistemas</h4>
-                                <p><strong>Enero 2017 - Agosto 2017</strong></p>
-                                <p><strong>Actividades:</strong></p>
+                                <h4>{{ __('Systems Administrator') }}</h4>
+                                <p><strong>{{ __('January 2017 - August 2017') }}</strong></p>
+                                <p><strong>{{ __('Activities') }}</strong></p>
                                 <ul>
-                                    <li>Mantenimiento y optimización de sistemas operativos y servidores, Gestión de cuentas de usuario y seguridad informática.</li>
+                                    <li>{{ __('Maintenance and optimization of operating systems and servers, Management of user accounts and computer security.') }}</li>
                                 </ul>
-                                <p><strong>Tecnologías:</strong></p>
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
                                 <ul class="tecno">
-                                    <li>Servidores</li>
-                                    <li>Seguridad Informática</li>
+                                    <li>{{ __('Servers') }}</li>
+                                    <li>{{ __('Computer security') }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -271,13 +278,13 @@
                         <div class="subgrid2">
                             <div class="subcol">
                                 <h3>Secretaría de Tránsito y Transporte de Florida</h3>
-                                <h4>Programador Web</h4>
-                                <p><strong>Abril 2016 - Octubre 2016</strong></p>
-                                <p><strong>Actividades:</strong></p>
+                                <h4>{{ __('Web Programmer') }}</h4>
+                                <p><strong>{{ __('April 2016 - October 2016') }}</strong></p>
+                                <p><strong>{{ __('Activities') }}:</strong></p>
                                 <ul>
-                                    <li>Desarrollo de la base de datos en MySQL y PostgreSQL, Programación de aplicaciones en Laravel y desarrollo de frontend con HTML, JavaScript, jQuery y Tailwind CSS.</li>
+                                    <li>{{ __('MySQL and PostgreSQL database development, Laravel application programming and frontend development with HTML, JavaScript, jQuery and Tailwind CSS.') }}</li>
                                 </ul>
-                                <p><strong>Tecnologías:</strong></p>
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
                                 <ul class="tecno">
                                     <li>Laravel</li>
                                     <li>MySQL</li>
@@ -288,16 +295,16 @@
 
                             <div class="subcol">
                                 <h3>Mercapava S.A.</h3>
-                                <h4>Auxiliar de Tecnología</h4>
-                                <p><strong>Abril 2012 - Marzo 2014</strong></p>
-                                <p><strong>Actividades:</strong></p>
+                                <h4>{{ __('Technology Assistant') }}</h4>
+                                <p><strong>{{ __('April 2012 - March 2014') }}</strong></p>
+                                <p><strong>{{ __('Activities') }}:</strong></p>
                                 <ul>
-                                    <li>Mantenimiento de hardware y soporte técnico, Gestión de información y generación de reportes para optimización de sistemas.</li>
+                                    <li>{{ __('Hardware maintenance and technical support, Information management and report generation for system optimization.') }}</li>
                                 </ul>
-                                <p><strong>Tecnologías:</strong></p>
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
                                 <ul class="tecno">
-                                    <li>Soporte Técnico</li>
-                                    <li>Gestión de Información</li>
+                                    <li>{{ __('Technical Support') }}</li>
+                                    <li>{{ __('Information Management') }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -308,7 +315,7 @@
                     <section id="contact">
                         <div class="subgrid1">
                             <div class="subcol">
-                                <h2>Contact</h2>
+                                <h2>{{ __('Contact') }}</h2>
                             </div>
                         <div class="subgrid2">
                             <div class="subcol">
@@ -316,7 +323,7 @@
                                     <svg height="28px" width="28px" fill="none" stroke-width="1.5" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="margin-right: 8px;">
                                         <path d="M19.077,4.928c-2.082-2.083-4.922-3.134-7.904-2.894C7.164,2.356,3.65,5.144,2.474,8.99 c-0.84,2.748-0.487,5.617,0.881,7.987L2.059,21.28c-0.124,0.413,0.253,0.802,0.67,0.691l4.504-1.207 c1.459,0.796,3.101,1.215,4.773,1.216h0.004c4.195,0,8.071-2.566,9.412-6.541C22.728,11.563,21.762,7.616,19.077,4.928z M16.898,15.554c-0.208,0.583-1.227,1.145-1.685,1.186c-0.458,0.042-0.887,0.207-2.995-0.624c-2.537-1-4.139-3.601-4.263-3.767 c-0.125-0.167-1.019-1.353-1.019-2.581S7.581,7.936,7.81,7.687c0.229-0.25,0.499-0.312,0.666-0.312c0.166,0,0.333,0,0.478,0.006 c0.178,0.007,0.375,0.016,0.562,0.431c0.222,0.494,0.707,1.728,0.769,1.853s0.104,0.271,0.021,0.437s-0.125,0.27-0.249,0.416 c-0.125,0.146-0.262,0.325-0.374,0.437c-0.125,0.124-0.255,0.26-0.11,0.509c0.146,0.25,0.646,1.067,1.388,1.728 c0.954,0.85,1.757,1.113,2.007,1.239c0.25,0.125,0.395,0.104,0.541-0.063c0.146-0.166,0.624-0.728,0.79-0.978 s0.333-0.208,0.562-0.125s1.456,0.687,1.705,0.812c0.25,0.125,0.416,0.187,0.478,0.291 C17.106,14.471,17.106,14.971,16.898,15.554z"></path>
                                     </svg>
-                                    <strong>Telefono: </strong> +57 3147736181
+                                    <strong>{{ __('Phone:') }}</strong> +57 3147736181
                                 </a>
                             </div>
                             <div class="subcol">      
@@ -324,7 +331,8 @@
                                     <svg height="28px" width="28px" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path>
                                     </svg>
-                                    <strong>Correo: </strong> Walter81w@hotmail.es
+                                    <strong>{{ __('Email: ') }} </strong> 
+                                        {{ __('Walter81w@hotmail.es') }} 
                                 </a>   
                             </div>
                         </div>
@@ -335,7 +343,7 @@
     <footer>
         <div class="footer-content">
             <!-- Aquí va el contenido del footer -->
-            <p>Derechos reservados © 2024</p>
+            <p>{{ __('Copyright © 2024') }}</p>
         </div>
     </footer>
     </body>
