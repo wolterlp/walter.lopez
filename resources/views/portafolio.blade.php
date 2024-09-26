@@ -388,6 +388,9 @@
                                     <li>Laravel</li>
                                     <li>MySQL</li>
                                     <li>PHP</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Blade</li>
                                 </ul>
                                 
                                 <a href="https://github.com/wolterlp" target="_blank">
@@ -405,11 +408,11 @@
 
                         <div class="subgrid2">
                             <div class="subcol">
-                                <h3>Iteria Forward Thinking</h3>
+                                <h3>Detection of patients with Diabetes I.A.</h3>
                                 <div class="imagenesProyectos">
-                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 1" class="img-proyecto">
-                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 2" class="img-proyecto">
-                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 3" class="img-proyecto">
+                                    <img src="{{ asset('storage/iaDiabetes1.jpg') }}" alt="Proyecto 1" class="img-proyecto">
+                                    <img src="{{ asset('storage/iaDiabetes3.jpg') }}" alt="Proyecto 2" class="img-proyecto">
+                                    <img src="{{ asset('storage/iaDiabetes2.jpg') }}" alt="Proyecto 3" class="img-proyecto">
                                 </div>
 
                                 <!-- Modal para mostrar la imagen ampliada -->
@@ -421,9 +424,10 @@
                                 <p><strong>{{ __('Technologies') }}:</strong></p>
                                 
                                 <ul class="tecno">
-                                    <li>Laravel</li>
-                                    <li>MySQL</li>
-                                    <li>PHP</li>
+                                    <li>Keras</li>
+                                    <li>Anaconda</li>
+                                    <li>Python</li>
+                                    <li>Jupyter Notebook</li>
                                 </ul>
                                 
                                 <a href="https://github.com/wolterlp" target="_blank">
@@ -439,11 +443,13 @@
                             </div>
 
                             <div class="subcol">
-                                <h3>Inverceramicas</h3>
+                                <h3>{{ __('Recognition of handwritten numbers') }}</h3>
                                 <div class="imagenesProyectos">
-                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 1" class="img-proyecto">
-                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 2" class="img-proyecto">
-                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 3" class="img-proyecto">
+                                    <img src="{{ asset('storage/reconicimientNumerosAMano1.jpg') }}" alt="Proyecto 1" class="img-proyecto">
+                                    <img src="{{ asset('storage/reconicimientNumerosAMano2.jpg') }}" alt="Proyecto 2" class="img-proyecto">
+                                    <img src="{{ asset('storage/reconicimientNumerosAMano3.jpg') }}" alt="Proyecto 3" class="img-proyecto">
+                                    <img src="{{ asset('storage/reconicimientNumerosAMano4.jpg') }}" alt="Proyecto 1" class="img-proyecto">
+                                    <img src="{{ asset('storage/reconicimientNumerosAMano5.jpg') }}" alt="Proyecto 2" class="img-proyecto">
                                 </div>
 
                                 <!-- Modal para mostrar la imagen ampliada -->
@@ -455,9 +461,10 @@
                                 <p><strong>{{ __('Technologies') }}:</strong></p>
                                 
                                 <ul class="tecno">
-                                    <li>Laravel</li>
-                                    <li>MySQL</li>
-                                    <li>PHP</li>
+                                    <li>Keras</li>
+                                    <li>Anaconda</li>
+                                    <li>Python</li>
+                                    <li>Jupyter Notebook</li>
                                 </ul>
                                 
                                 <a href="https://github.com/wolterlp" target="_blank">
