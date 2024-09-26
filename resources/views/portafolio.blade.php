@@ -57,9 +57,10 @@
                 <nav>
                     <ul>
                         <li><a href="#about" class="nav-link" >{{ __('About') }}</a></li>
+                        <li><a href="#keyTechnologies" class="nav-link" >{{ __('Key Technologies') }}</a></li>
+                        <li><a href="#experience" class="nav-link" >{{ __('Experiencia') }}</a></li>
                         <li><a href="#projects" class="nav-link" >{{ __('Projects') }}</a></li>
                         <li><a href="#contact" class="nav-link" >{{ __('Contact') }}</a></li>
-                        <li><a href="#cv" class="nav-link" >{{ __('Curriculum Vitae') }}</a></li>
                     </ul>
                 </nav>
             </div>
@@ -146,7 +147,7 @@
                     </div>
                 </div>
                 <div class="col1"><!-- Tecnologías -->
-                    <section id="Tecnologias">
+                    <section id="keyTechnologies">
                         <div class="subgrid1">
                             <div class="subcol">
                                 <h2>{{ __('Key Technologies') }}</h2>
@@ -199,7 +200,7 @@
                 </div>
 
                 <div class="col2"><!-- Experiencia -->
-                    <section id="Experiencia">
+                    <section id="experience">
                         <div class="subgrid1">
                             <div class="subcol">
                                 <h2>{{ __('Professional Experience') }}</h2>
@@ -310,13 +311,177 @@
                         </div>
                     </section>
                 </div>
+
+                <div class="col2"><!-- Proyectos -->
+                    <section id="projects">
+                        <div class="subgrid1">
+                            <div class="subcol">
+                                <h2>{{ __('Proyectos') }}</h2>
+                            </div>
+                        </div>
+
+                        <div class="subgrid2">
+                            <div class="subcol">
+                                <h3>{{ __('Poultry') }}</h3>
+                                
+                                
+                                <div class="imagenesProyectos">
+                                    <img src="{{ asset('storage/proyectoAvicola1.jpg') }}" alt="proyectoAvicola1" class="img-proyecto">
+                                    <img src="{{ asset('storage/proyectoAvicola2.jpg') }}" alt="proyectoAvicola2" class="img-proyecto">
+                                    <img src="{{ asset('storage/proyectoAvicola3.jpg') }}" alt="proyectoAvicola3" class="img-proyecto">
+                                    <img src="{{ asset('storage/proyectoAvicola4.jpg') }}" alt="proyectoAvicola4" class="img-proyecto">
+                                    <img src="{{ asset('storage/proyectoAvicola5.jpg') }}" alt="proyectoAvicola5" class="img-proyecto">
+                                    <img src="{{ asset('storage/proyectoAvicola6.jpg') }}" alt="proyectoAvicola6" class="img-proyecto">
+                                </div>
+
+                                <!-- Modal para mostrar la imagen ampliada -->
+                                <div id="modal" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="imgAmpliada">
+                                </div>
+
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
+                                
+                                <ul class="tecno">
+                                    <li>Laravel</li>
+                                    <li>MySQL</li>
+                                    <li>PHP</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Blade</li>
+                                </ul>
+                                
+                                <a href="https://github.com/wolterlp/Avicola" target="_blank">
+                                    <ul class="sources">
+                                        <li class="sourcesIcono">
+                                            <svg height="28px" width="28px" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 0a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58 0-.29-.01-1.27-.02-2.3-3.34.73-4.05-1.61-4.05-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.09-.74.09-.74 1.22.08 1.87 1.26 1.87 1.26 1.08 1.85 2.83 1.32 3.51 1.01.11-.78.42-1.32.76-1.63-2.67-.3-5.48-1.34-5.48-5.94 0-1.31.47-2.39 1.24-3.24-.12-.3-.54-1.52.11-3.16 0 0 1.01-.32 3.3 1.23a11.55 11.55 0 013-.4c1.02.01 2.04.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.64.23 2.86.11 3.16.77.85 1.24 1.93 1.24 3.24 0 4.61-2.81 5.64-5.48 5.94.43.37.82 1.1.82 2.22 0 1.6-.02 2.88-.02 3.27 0 .32.22.69.83.57A12 12 0 0012 0z"></path>
+                                            </svg>
+                                        </li>
+                                        <li class="sourcesTexto">{{ __('Source code') }}</li>   
+                                    </ul>
+                                </a>
+                            </div>
+
+
+                            <div class="subcol">
+                                <h3>{{ __('Electrical Supplies') }}</h3>
+
+                                <div class="imagenesProyectos">
+                                    <img src="{{ asset('storage/suministrosElectricos1.jpg') }}" alt="Proyecto 1" class="img-proyecto">
+                                    <img src="{{ asset('storage/suministrosElectricos2.jpg') }}" alt="Proyecto 2" class="img-proyecto">
+                                    <img src="{{ asset('storage/suministrosElectricos3.jpg') }}" alt="Proyecto 3" class="img-proyecto">
+                                    <img src="{{ asset('storage/suministrosElectricos4.jpg') }}" alt="Proyecto 1" class="img-proyecto">
+                                    <img src="{{ asset('storage/suministrosElectricos5.jpg') }}" alt="Proyecto 2" class="img-proyecto">
+                                    <img src="{{ asset('storage/suministrosElectricos6.jpg') }}" alt="Proyecto 3" class="img-proyecto">
+                                </div>
+
+                                <!-- Modal para mostrar la imagen ampliada -->
+                                <div id="modal" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="imgAmpliada">
+                                </div>
+
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
+                                
+                                <ul class="tecno">
+                                    <li>Laravel</li>
+                                    <li>MySQL</li>
+                                    <li>PHP</li>
+                                </ul>
+                                
+                                <a href="https://github.com/wolterlp" target="_blank">
+                                    <ul class="sources">
+                                        <li class="sourcesIcono">
+                                            <svg height="28px" width="28px" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 0a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58 0-.29-.01-1.27-.02-2.3-3.34.73-4.05-1.61-4.05-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.09-.74.09-.74 1.22.08 1.87 1.26 1.87 1.26 1.08 1.85 2.83 1.32 3.51 1.01.11-.78.42-1.32.76-1.63-2.67-.3-5.48-1.34-5.48-5.94 0-1.31.47-2.39 1.24-3.24-.12-.3-.54-1.52.11-3.16 0 0 1.01-.32 3.3 1.23a11.55 11.55 0 013-.4c1.02.01 2.04.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.64.23 2.86.11 3.16.77.85 1.24 1.93 1.24 3.24 0 4.61-2.81 5.64-5.48 5.94.43.37.82 1.1.82 2.22 0 1.6-.02 2.88-.02 3.27 0 .32.22.69.83.57A12 12 0 0012 0z"></path>
+                                            </svg>
+                                        </li>
+                                        <li class="sourcesTexto">{{ __('Source code') }}</li>   
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="subgrid2">
+                            <div class="subcol">
+                                <h3>Iteria Forward Thinking</h3>
+                                <div class="imagenesProyectos">
+                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 1" class="img-proyecto">
+                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 2" class="img-proyecto">
+                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 3" class="img-proyecto">
+                                </div>
+
+                                <!-- Modal para mostrar la imagen ampliada -->
+                                <div id="modal" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="imgAmpliada">
+                                </div>
+
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
+                                
+                                <ul class="tecno">
+                                    <li>Laravel</li>
+                                    <li>MySQL</li>
+                                    <li>PHP</li>
+                                </ul>
+                                
+                                <a href="https://github.com/wolterlp" target="_blank">
+                                    <ul class="sources">
+                                        <li class="sourcesIcono">
+                                            <svg height="28px" width="28px" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 0a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58 0-.29-.01-1.27-.02-2.3-3.34.73-4.05-1.61-4.05-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.09-.74.09-.74 1.22.08 1.87 1.26 1.87 1.26 1.08 1.85 2.83 1.32 3.51 1.01.11-.78.42-1.32.76-1.63-2.67-.3-5.48-1.34-5.48-5.94 0-1.31.47-2.39 1.24-3.24-.12-.3-.54-1.52.11-3.16 0 0 1.01-.32 3.3 1.23a11.55 11.55 0 013-.4c1.02.01 2.04.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.64.23 2.86.11 3.16.77.85 1.24 1.93 1.24 3.24 0 4.61-2.81 5.64-5.48 5.94.43.37.82 1.1.82 2.22 0 1.6-.02 2.88-.02 3.27 0 .32.22.69.83.57A12 12 0 0012 0z"></path>
+                                            </svg>
+                                        </li>
+                                        <li class="sourcesTexto">{{ __('Source code') }}</li>   
+                                    </ul>
+                                </a>
+                            </div>
+
+                            <div class="subcol">
+                                <h3>Inverceramicas</h3>
+                                <div class="imagenesProyectos">
+                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 1" class="img-proyecto">
+                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 2" class="img-proyecto">
+                                    <img src="{{ asset('storage/fotow.jpeg') }}" alt="Proyecto 3" class="img-proyecto">
+                                </div>
+
+                                <!-- Modal para mostrar la imagen ampliada -->
+                                <div id="modal" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="imgAmpliada">
+                                </div>
+
+                                <p><strong>{{ __('Technologies') }}:</strong></p>
+                                
+                                <ul class="tecno">
+                                    <li>Laravel</li>
+                                    <li>MySQL</li>
+                                    <li>PHP</li>
+                                </ul>
+                                
+                                <a href="https://github.com/wolterlp" target="_blank">
+                                    <ul class="sources">
+                                        <li class="sourcesIcono">
+                                            <svg height="28px" width="28px" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 0a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58 0-.29-.01-1.27-.02-2.3-3.34.73-4.05-1.61-4.05-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.09-.74.09-.74 1.22.08 1.87 1.26 1.87 1.26 1.08 1.85 2.83 1.32 3.51 1.01.11-.78.42-1.32.76-1.63-2.67-.3-5.48-1.34-5.48-5.94 0-1.31.47-2.39 1.24-3.24-.12-.3-.54-1.52.11-3.16 0 0 1.01-.32 3.3 1.23a11.55 11.55 0 013-.4c1.02.01 2.04.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.65 1.64.23 2.86.11 3.16.77.85 1.24 1.93 1.24 3.24 0 4.61-2.81 5.64-5.48 5.94.43.37.82 1.1.82 2.22 0 1.6-.02 2.88-.02 3.27 0 .32.22.69.83.57A12 12 0 0012 0z"></path>
+                                            </svg>
+                                        </li>
+                                        <li class="sourcesTexto">{{ __('Source code') }}</li>   
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             
                 <div class="col2"><!-- Contact -->
                     <section id="contact">
-                        <div class="subgrid1">
-                            <div class="subcol">
+                        <div class="subgrid">
+                            <div class="subcolContact">
                                 <h2>{{ __('Contact') }}</h2>
-                            </div>
+                            </div>    
+                        </div>
                         <div class="subgrid2">
                             <div class="subcol">
                                 <a href="https://wa.me/573147736181" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
@@ -347,5 +512,36 @@
         </div>
     </footer>
     </body>
+<script>
+    // Obtener el modal
+    var modal = document.getElementById("modal");
+
+    // Obtener la imagen del modal y el span que cierra el modal
+    var modalImg = document.getElementById("imgAmpliada");
+    var closeModal = document.getElementsByClassName("close")[0];
+
+    // Obtener todas las imágenes en la clase "img-proyecto"
+    var imgs = document.querySelectorAll(".img-proyecto");
+
+    imgs.forEach(img => {
+        img.addEventListener("click", function() {
+            modal.style.display = "block";
+            modalImg.src = this.src; // Coloca la imagen seleccionada en el modal
+        });
+    });
+
+    // Al hacer clic en "cerrar" (la X), oculta el modal
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // También cerrar al hacer clic fuera de la imagen
+    modal.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
 </html>
 

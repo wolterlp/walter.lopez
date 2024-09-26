@@ -641,6 +641,26 @@
     border-radius: 6px; /* Bordes redondeados en subcolumnas */
 }
 
+.subcolContact {
+    /* Ocupar todo el alto y ancho del contenedor padre */
+    width: 100%;
+    height: 100%;
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem; 
+    padding: 10rem;
+    color: var(--text-color); /* Texto */
+    color: var(--highlight-color); /* Color destacado para encabezados */
+
+    /* Ocupar todo el alto y ancho del contenedor padre */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Encabezados */
 .subcol h2, .subcol h3 {
     color: var(--highlight-color); /* Color destacado para encabezados */
@@ -676,4 +696,97 @@
 .tecno li {
     color: var(--text-light-color);
 }
+
+/*Codigo*/
+
+.sources {
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    
+
+.sources .sourcesTextoIcono {
+    display: flex;
+    align-items: center;
+}
+
+.sources .sourcesTexto {
+    font-size: 1rem;
+    color: var(--text-light-color);
+}
+
+/*Fin Codigo*/
+
+/*imagenes proyectos*/
+
+    .imagenesProyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .imagenesProyectos img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .imagenesProyectos img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos del modal */
+    .modal {
+        display: none; /* Oculto por defecto */
+        position: fixed; 
+        z-index: 1000; /* Supera otros elementos */
+        padding-top: 60px; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo transparente */
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 100%; /* Ajusta el tamaño de la imagen */
+        max-width: 800px;
+    }
+
+    .close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #f19203;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-content {
+        animation: zoom 0.6s;
+    }
+
+    @keyframes zoom {
+        from {transform: scale(0)}
+        to {transform: scale(1)}
+    }
+
+/*fin imagenes proyectos*/
 
